@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./style/style.css" />
+
+		<title>Enquiry</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<a href="index.html" class="logo">Do-Re-Mi</a>
+
+			<input class="menu-btn" type="checkbox" id="menu-btn" />
+			<label class="menu-icon" for="menu-btn"
+				><span class="navicon"></span
+			></label>
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li>
+					<div class="dropdown">
+						<button class="dropbtn">
+							Services
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="product1.html">Pianos</a>
+							<a href="product2.html">Guitars</a>
+							<a href="product3.html">Violins</a>
+							<a href="product4.html">Xylophones</a>
+						</div>
+					</div>
+				</li>
+				<li><a href="enquiry.html">Enquiry</a></li>
+				<li><a href="enhancement.html">Enhancement</a></li>
+				<li><a href="disclaimer.html">Disclaimer</a></li>
+				<li><a href="aboutme.html">About Me</a></li>
+				<li><a href="acknowledgement.html">Acknowledgement</a></li>
+			</ul>
+		</header>
+		<div class="header-support"></div>
+
+		<div class="container">
+
+			<form>
+				<h1>Enquiry Form</h1>
+
+				<div class="form-content">
+					<div class="row">
+						<div class="group">
+							<input
+								type="text"
+								name="fname"
+								id="fname"
+								required
+								size="25"
+								maxlength="25"
+								pattern="^[A-Za-z]+$"
+							/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="fname">First Name</label>
+						</div>
+
+						<div class="group">
+							<input
+								type="text"
+								name="lname"
+								id="lname"
+								required
+								size="25"
+								maxlength="25"
+								pattern="^[A-Za-z]+$"
+							/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="lname">Last Name</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="group">
+							<input type="email" name="email" id="email" required />
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="email">Email ID</label>
+						</div>
+
+						<div class="group">
+							<input
+								type="text"
+								id="staddress"
+								name="staddress"
+								required
+								size="40"
+								maxlength="40"
+							/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="staddress">Street Address</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="group">
+							<input
+								type="text"
+								id="city"
+								name="city"
+								required
+								size="20"
+								maxlength="20"
+							/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="city">City</label>
+						</div>
+						<div class="group">
+							<input
+								type="text"
+								name="postcode"
+								id="postcode"
+								size="5"
+								maxlength="5"
+								pattern="^[0-9]+$"
+							/>
+							<span class="highlight"></span>
+							<span class="bar"></span>
+							<label for="postcode">Postcode</label>
+						</div>
+					</div>
+
+					<div class="group">
+						<input
+							type="tel"
+							name="phone"
+							id="phone"
+							placeholder="+6012247970"
+							required
+							maxlength="10"
+							size="10"
+						/>
+						<span class="highlight"></span>
+						<span class="bar"></span>
+						<label for="phone">Phone Number</label>
+					</div>
+
+					<div class="row">
+						<div class="group">
+							<label for="state">State</label>
+							<div class="select">
+								<select name="state" id="state" required>
+									<option value="Johor">Johor</option>
+									<option value="Kedah">Kedah</option>
+									<option value="Kelantan">Kelantan</option>
+									<option value="Kuala Lumpur">Kuala Lumpur</option>
+									<option value="Labuan">Labuan</option>
+									<option value="Melaka">Melaka</option>
+									<option value="Negeri Sembilan">Negeri Sembilan</option>
+									<option value="Pahang">Pahang</option>
+									<option value="Penang">Penang</option>
+									<option value="Perak">Perak</option>
+									<option value="Perlis">Perlis</option>
+									<option value="Putrajaya">Putrajaya</option>
+									<option value="Sabah">Sabah</option>
+									<option value="Sarawak">Sarawak</option>
+									<option value="Selangor">Selangor</option>
+									<option value="Terengganu">Terengganu</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="group">
+							<label for="services">Services</label>
+							<div class="select">
+								<select name="services" id="services" required>
+									<option value="">Shipping & Delivery</option>
+									<option value="">Secure Payment</option>
+									<option value="">Quality Product</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="group">
+							<label for="comment">Comment</label>
+							<textarea
+								name="comment"
+								id="comment"
+								cols="30"
+								rows="10"
+								placeholder="Specify particular aspect you are interested:"
+							></textarea>
+						</div>
+
+						<button type="submit" class="btn-submit">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

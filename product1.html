@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Pianos</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo">Do-Re-Mi</a>
+
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn current">
+              Services
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="product1.html">Pianos</a>
+              <a href="product2.html">Guitars</a>
+              <a href="product3.html">Violins</a>
+              <a href="product4.html">Xylophones</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="enhancement.html">Enhancement</a></li>
+        <li><a href="enhancement2.html">Enhancement2</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="acknowledgement.html">Acknowledgement</a></li>
+      </ul>
+    </header>
+    <section class="shop-guitars">
+      <div class="container">
+        <div class="shop-guitars-content">
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/piano1.jpeg" alt="piano" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                SDP-1 Portable Digital Piano
+              </h3>
+              <div class="shop-guitars-card-price">$260</div>
+              <p class="shop-guitars-card-desc">
+                SDP-1 Portable Digital Piano by Gear4music
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/piano2.jpeg" alt="piano" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">Yamaha PSR EW310</h3>
+              <div class="shop-guitars-card-price">$299</div>
+              <p class="shop-guitars-card-desc">
+                Yamaha PSR EW310 Portable Keyboard
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/piano3.jpeg" alt="piano" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                DP-12 Compact Digital Piano
+              </h3>
+              <div class="shop-guitars-card-price">$500</div>
+              <p class="shop-guitars-card-desc">
+                DP-12 Compact Digital Piano by Gear4music, Matte Black
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/piano4.jpeg" alt="piano" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                DP-12 Compact Digital Piano
+              </h3>
+              <div class="shop-guitars-card-price">$540</div>
+              <p class="shop-guitars-card-desc">
+                DP-12 Compact Digital Piano by Gear4music + Stool Pack, Light
+                Oak
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/piano5.jpeg" alt="piano" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                Yamaha CLP 725 Digital Piano
+              </h3>
+              <div class="shop-guitars-card-price">$800</div>
+              <p class="shop-guitars-card-desc">
+                Yamaha CLP 725 Digital Piano Package, Satin Black
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/piano6.jpeg" alt="piano" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                GDP-200 Digital Grand Piano
+              </h3>
+              <div class="shop-guitars-card-price">$550</div>
+              <p class="shop-guitars-card-desc">
+                GDP-200 Digital Grand Piano by Gear4music
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="cp-text">&copy; Adlet Bekbergenov</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

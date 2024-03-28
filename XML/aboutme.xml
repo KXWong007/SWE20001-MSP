@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./style/style.css" />
+		<link rel="stylesheet" href="./style/navbar.css" />
+		<link rel="stylesheet" href="./style/aboutme.css" />
+
+		<title>About me</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<a href="index.html" class="logo">Do-Re-Mi</a>
+
+			<input class="menu-btn" type="checkbox" id="menu-btn" />
+			<label class="menu-icon" for="menu-btn"
+				><span class="navicon"></span
+			></label>
+			<ul class="menu">
+				<li><a href="index.html">Home</a></li>
+				<li>
+					<div class="dropdown">
+						<button class="dropbtn">
+							Services
+							<i class="fa fa-caret-down"></i>
+						</button>
+						<div class="dropdown-content">
+							<a href="product1.html">Pianos</a>
+							<a href="product2.html">Guitars</a>
+							<a href="product3.html">Violins</a>
+							<a href="product4.html">Xylophones</a>
+						</div>
+					</div>
+				</li>
+				<li><a href="enquiry.html">Enquiry</a></li>
+				<li><a href="enhancement.html">Enhancement</a></li>
+				<li><a href="disclaimer.html">Disclaimer</a></li>
+				<li><a href="aboutme.html">About Me</a></li>
+				<li><a href="acknowledgement.html">Acknowledgement</a></li>
+			</ul>
+		</header>
+		<div class="header-support"></div>
+
+		<section id="about">
+			<div class="section-intro">
+				<h1>Let me introduce myself.</h1>
+
+				<div class="intro-info">
+					<img
+						src="./images/aboutme.png"
+						alt="Profile Picture"
+					/>
+
+					<p class="lead">
+						My name is Adlet Bekbergenov and I am a student, and studying at Swinburne university in Sarawak in the field of IT. I like to think and new things, but mostly I love to learn something new and face challenges. Every time that I can learn something new and put into practice, I’m having so much fun. Last few years, I am interested in developing and programming.
+					</p>
+				</div>
+			</div>
+			<!-- /section-intro -->
+
+			<div class="about-content">
+				<div class="tab-full">
+					<ul class="info-list">
+						<li>
+							<strong>Fullname:</strong>
+							<span>Adlet Bekbergenov</span>
+						</li>
+
+						<li>
+							<strong>Student Number:</strong>
+							<span>101231306</span>
+						</li>
+						<li>
+							<strong>Course:</strong>
+							<span>Information Technologies (IT)</span>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		<footer class="profile-footer">
+        <a href="mailto:101231306@students.swinburne.edu.my" class="footer-link"
+          >101231306@students.swinburne.edu.my</a>
+      	</footer>
+		</section>
+	</body>
+</html>
