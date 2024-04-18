@@ -29,10 +29,10 @@
 							<i class="fa fa-caret-down"></i>
 						</button>
 						<div class="dropdown-content">
-							<a href="product1.html">Pianos</a>
-							<a href="product2.html">Guitars</a>
-							<a href="product3.html">Violins</a>
-							<a href="product4.html">Xylophones</a>
+							<a href="menu1.html">Pianos</a>
+							<a href="menu2.html">Guitars</a>
+							<a href="menu3.html">Violins</a>
+							<a href="menu4.html">Xylophones</a>
 						</div>
 					</div>
 				</li>

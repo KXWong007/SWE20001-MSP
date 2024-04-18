@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Western</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"><img src="./images/Logo.png" alt="FoodEdge" style="width:90px;height:45px;"></a>
+
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="index.html" class="current">Home</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Menu
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="menu1.html">Featured</a>
+              <a href="menu2.html">Local</a>
+              <a href="menu3.html">Western</a>
+              <a href="menu4.html">Halal</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="enquiry.html">About Us</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </header>
+    <section class="shop-guitars">
+      <div class="container">
+        <div class="shop-guitars-content">
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/violin1.jpeg" alt="violin" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">Student Full Size Violin</h3>
+              <div class="shop-guitars-card-price">$100</div>
+              <p class="shop-guitars-card-desc">
+                Student Full Size Violin by Gear4music
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/violin2.jpeg" alt="violin" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">Hidersine Inizio Violin</h3>
+              <div class="shop-guitars-card-price">$150</div>
+              <p class="shop-guitars-card-desc">
+                Hidersine Inizio Violin Outfit, Full Size
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/violin3.jpeg" alt="violin" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">Stentor Student 1 Violin</h3>
+              <div class="shop-guitars-card-price">$199</div>
+              <p class="shop-guitars-card-desc">
+                Stentor Student 1 Violin Outfit, Full Size
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/violin4.jpeg" alt="violin" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                Stagg S-Shaped Electric Violin
+              </h3>
+              <div class="shop-guitars-card-price">$250</div>
+              <p class="shop-guitars-card-desc">
+                Stagg S-Shaped Electric Violin Outfit, Metallic Blue
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/violin5.jpeg" alt="violin" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                Hidersine Piacenza Finetune Violin
+              </h3>
+              <div class="shop-guitars-card-price">$350</div>
+              <p class="shop-guitars-card-desc">
+                Hidersine Piacenza Finetune Violin Outfit, Full Size
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/violin6.jpeg" alt="violin" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                Conrad Goetz Menuett-Heritage 98 Violin
+              </h3>
+              <div class="shop-guitars-card-price">$550</div>
+              <p class="shop-guitars-card-desc">
+                Conrad Goetz Menuett-Heritage 98 Violin Outfit
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="cp-text">&copy; Adlet Bekbergenov</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

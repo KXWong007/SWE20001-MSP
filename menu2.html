@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Local</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"><img src="./images/Logo.png" alt="FoodEdge" style="width:90px;height:45px;"></a>
+
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+        <li><a href="index.html" class="current">Home</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Menu
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="menu1.html">Featured</a>
+              <a href="menu2.html">Local</a>
+              <a href="menu3.html">Western</a>
+              <a href="menu4.html">Halal</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="enquiry.html">About Us</a></li>
+        <li><a href="basket.html">Basket</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </header>
+    <section class="shop-guitars">
+      <div class="container">
+        <div class="shop-guitars-content">
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/guitar1.jpg" alt="Guitar" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">Tanglewood TWIDN</h3>
+              <div class="shop-guitars-card-price">$150</div>
+              <p class="shop-guitars-card-desc">
+                Tanglewood TWIDN Inscription Series Dreadnought Acoustic
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/guitar2.jpg" alt="Guitar" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">LA II Select Bass Guitar</h3>
+              <div class="shop-guitars-card-price">$200</div>
+              <p class="shop-guitars-card-desc">
+                LA II Select Bass Guitar by Gear4music, Moss Burst
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/guitar3.jpeg" alt="Guitar" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                Squier Bullet Stratocaster
+              </h3>
+              <div class="shop-guitars-card-price">$189</div>
+              <p class="shop-guitars-card-desc">
+                Squier Bullet Stratocaster w/ Trem, Brown Sunburst
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/guitar4.jpeg" alt="Guitar" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                New Jersey Select Electric Guitar
+              </h3>
+              <div class="shop-guitars-card-price">$240</div>
+              <p class="shop-guitars-card-desc">
+                New Jersey Select Electric Guitar by Gear4music, Silverburst
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/guitar5.jpeg" alt="Guitar" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                Hartwood Libretto Double Top Acoustic Guitar
+              </h3>
+              <div class="shop-guitars-card-price">$289</div>
+              <p class="shop-guitars-card-desc">
+                Hartwood Libretto Double Top Acoustic Guitar
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+          <div class="shop-guitars-card">
+            <div class="shop-guitars-card-img">
+              <img src="./images/guitar6.jpeg" alt="Guitar" />
+            </div>
+            <div class="shop-guitars-card-text">
+              <h3 class="shop-guitars-card-title">
+                RedSub Coliseum Fanned Fret 6-String Bass
+              </h3>
+              <div class="shop-guitars-card-price">$550</div>
+              <p class="shop-guitars-card-desc">
+                RedSub Coliseum Fanned Fret 6-String Bass, Purple Burl Burst
+              </p>
+              <button class="btn btn-add" onclick="saveData(event)">
+                Enquire
+              </button>
+              <button class="btn btn-add">Shop Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <p class="cp-text">&copy; Adlet Bekbergenov</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

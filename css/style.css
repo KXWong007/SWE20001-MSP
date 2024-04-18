@@ -79,7 +79,7 @@ a {
   display: block;
   float: left;
   font-size: 2em;
-  padding: 10px 20px;
+  padding: 10px 60px;
   text-decoration: none;
 }
 
@@ -263,10 +263,11 @@ a {
   text-transform: uppercase;
   z-index: 10;
   opacity: 0.9;
+  text-shadow: 2px 2px #000000;
 }
 #main h3 {
   font-family: 'Oswald', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 0;
   font-weight: 400;
   letter-spacing: 8px;
@@ -344,7 +345,7 @@ a {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z3VpdGFyfGVufDB8fDB8fA%3D%3D&w=1000&q=80);
+  background-image: url(../images/main1.jpg);
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -358,7 +359,7 @@ a {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(https://cdn.pixabay.com/photo/2022/05/24/19/28/cello-7219171__340.jpg);
+  background-image: url(../images/main2.jpg);
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
@@ -372,7 +373,7 @@ a {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-image: url(https://media.istockphoto.com/photos/favorite-classical-musicclose-up-view-of-gentle-female-hands-playing-picture-id1129332575?k=20&m=1129332575&s=612x612&w=0&h=DTpOnAdbtHwbC60LMOpSOlMOogOPg8wyyIRvJzwJtc8=);
+  background-image: url(../images/main3.jpg);
   background-attachment: fixed;
   background-size: cover;
   -moz-background-size: cover;
