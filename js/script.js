@@ -1,3 +1,45 @@
+/* Progess bar */
+const progress = document.querySelector('.progress');
+const orderCompleted = document.getElementById('order-completed');
+const returnBtn = document.getElementById('return-btn');
+
+let currentStep = 0;
+const totalSteps = 8; // Total number of steps
+
+// Function to update progress
+function updateProgress(step) {
+    const percent = (step / totalSteps) * 100;
+    progress.style.width = percent + '%';
+    if (step === totalSteps) {
+        setTimeout(() => {
+            orderCompleted.style.display = 'block';
+        }, 500);
+    }
+}
+
+// Function to handle next step button click
+function nextStep() {
+    if (currentStep < totalSteps) {
+        currentStep++;
+        updateProgress(currentStep);
+    }
+}
+
+// Automatically progress (seconds)
+const intervalId = setInterval(() => {
+    nextStep();
+    if (currentStep === totalSteps) {
+        clearInterval(intervalId);
+    }
+}, 2000);
+
+// Handle return to home button click
+returnBtn.addEventListener('click', () => {
+    // Replace this with the URL of your home page
+    window.location.href = 'index.html';
+});
+
+/* Product */
 // Products Array
 var products = [
   'SDP-1 Portable Digital Piano',

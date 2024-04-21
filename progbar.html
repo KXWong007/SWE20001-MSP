@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Order Status Tracking</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="index.html" class="logo"><img src="./images/Logo.png" title ="HOME - Click Me!" alt="FoodEdge"></a>
+            <ul class="left-menu">
+              <li>
+                <div class="dropdown">
+                  <button class="dropbtn">Menu</button>
+                  <div class="dropdown-content">
+                    <a href="menu1.html">Featured</a>
+                    <a href="menu2.html">Local</a>
+                    <a href="menu3.html">Western</a>
+                    <a href="menu4.html">Halal</a>
+                  </div>
+                </div>
+              </li>
+              <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+            <ul class="menu">
+              <li><a href="basket.html">Basket</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+        </header>
+        <div class="header-support"></div>
+        
+        <div class="prog-bar-container">
+            <h1>Order Status Tracking</h1>
+            <div class="status-container">
+                <div class="status">
+                    <div class="step">Order Placed</div>
+                    <div class="step">Preparing</div>
+                    <div class="step">Out for Delivery</div>
+                    <div class="step">Delivered</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div><br>
+            <div id="order-completed" style="display: none;">
+                <p>We Thank You for your order!</p>
+                <button id="return-btn">Return to Home</button>
+            </div>
+        </div>
+
+        <script src="./js/script.js"></script>
+
+        <footer class="footer">
+            <div class="container">
+              <div class="footer-content">
+                <p class="cp-text">&copy; FoodEdge Gourmet Catering</p>
+              </div>
+            </div>
+        </footer>
+    </body>
+</html>
