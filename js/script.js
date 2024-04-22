@@ -246,3 +246,23 @@ form.addEventListener('submit', function (e) {
       comment;
   }
 });
+
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  var cardNumber = document.getElementById('card-number').value.trim();
+  var expiryDate = document.getElementById('expiry-date').value.trim();
+  var cvv = document.getElementById('cvv').value.trim();
+  
+  // Basic validation
+  if (!cardNumber || !expiryDate || !cvv) {
+    document.getElementById('message').innerText = 'Please fill in all fields.';
+    return;
+  }
+
+  // Simulate payment processing
+  setTimeout(function() {
+    document.getElementById('message').innerText = 'Payment successful!';
+    // You can redirect the user to a success page or perform other actions here
+  }, 2000);
+});
