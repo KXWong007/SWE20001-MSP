@@ -9,29 +9,8 @@
   </head>
 
   <body>
-    <header class="header">
-      <a href="index.html" class="logo"><img src="./images/Logo.png" title ="HOME - Click Me!" alt="FoodEdge"></a>
-      <ul class="left-menu">
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn">Menu</button>
-            <div class="dropdown-content">
-              <a href="menu1.html">Featured</a>
-              <a href="menu2.html">Local</a>
-              <a href="menu3.html">Western</a>
-              <a href="menu4.html">Halal</a>
-            </div>
-          </div>
-        </li>
-        <li><a href="aboutus.html">About Us</a></li>
-      </ul>
-      <ul class="menu">
-        <li><a href="basket.html">Basket</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
-      </ul>
-    </header>
-    <div class="header-support"></div>
+    <!--Header-->
+    <?php include("header.php"); ?>
 
     <section id="about">
       <div class="section-intro">
@@ -91,12 +70,7 @@
       </div>
     </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <p class="cp-text">&copy; FoodEdge Gourmet Catering</p>
-        </div>
-      </div>
-    </footer>
+    <!--Footer-->
+    <?php include("footer.php"); ?>
   </body>
 </html>
