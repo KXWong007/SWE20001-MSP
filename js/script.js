@@ -31,7 +31,7 @@ const intervalId = setInterval(() => {
     if (currentStep === totalSteps) {
         clearInterval(intervalId);
     }
-}, 2000);
+}, 1000);
 
 // Handle return to home button click
 returnBtn.addEventListener('click', () => {
