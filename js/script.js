@@ -60,3 +60,25 @@ document.getElementById('payment-form').addEventListener('submit', function(even
     window.location.href = 'progbar.php';
   }, 2000);
 });
+
+document.getElementById('edit-btn').addEventListener('click', function() {
+    document.getElementById('edit-modal').style.display = 'block';
+});
+
+document.getElementsByClassName('close')[0].addEventListener('click', function() {
+    document.getElementById('edit-modal').style.display = 'none';
+});
+
+document.getElementById('logout-btn').addEventListener('click', function() {
+    // Add your logout functionality here
+    alert('Logged out!');
+});
+
+document.getElementById('edit-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var newName = document.getElementById('edit-name').value;
+    var newEmail = document.getElementById('edit-email').value;
+    document.getElementById('name').textContent = newName;
+    document.getElementById('email').textContent = newEmail;
+    document.getElementById('edit-modal').style.display = 'none';
+});

@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <input type="submit" value="proceed to checkout" class="submit-btn">
+            <button type="submit" onclick="window.location.href = 'progbar.php';" class="submit-btn">Pay Now</button>
         </form>
     </div>
 </body>

@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cartstyle.css" />
     <title>Local</title>
   </head>
 
   <body>
     <!--Header-->
     <?php include("header.php"); ?>
-
+    <!--Main-->
     <section>
       <div class="menu-title">
         <h1>Local Cuisine</h1>
       </div>
     </section>
-    <section class="shop-guitars">
+    <section>
       <div class="container">
         <div class="shop-food-content">
           <div class="shop-food-card">
@@ -89,8 +90,10 @@
         </div>
       </div>
     </section>
+    <!--Cart-->
+    <?php include("cart.php"); ?>
     <!--Footer-->
     <?php include("footer.php"); ?>
-    <script src="./js/script.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>

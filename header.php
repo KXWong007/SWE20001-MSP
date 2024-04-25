@@ -18,7 +18,8 @@
                     <li><a href="aboutus.php">About Us</a></li>
                 </ul>
                 <ul class="menu">
-                    <li><a href="basket.php">Basket</a></li>
+                    <li><a onclick="toggleCartSidebar()">Basket</a></li>
+                    <li><a href="profile.php">Profile</a></li>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="register.php">Register</a></li>
                 </ul>

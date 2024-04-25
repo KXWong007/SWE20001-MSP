@@ -12,6 +12,9 @@
     <!--Header-->
     <?php include("header.php"); ?>
 
+    <!--Create User Database-->
+    <?php include ("user_db-table.php"); ?>
+
     <div id="main">
       <section>
         <div class="title">
