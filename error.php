@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Exflora - Error Page"/>
+		<meta name="description" content="FCMS - Error Page"/>
 		<meta name="keywords" content="HTML5"/>
 		<meta name="author" content="Wong Kiing Xuan"/>
-		<title> Exflora - Error Page </title>
+		<title> FCMS - Error Page </title>
 	</head>
 	<body>
 		<h1>Error Messages:</h1>

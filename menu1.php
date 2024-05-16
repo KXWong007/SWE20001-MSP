@@ -21,72 +21,43 @@
     <section>
       <div class="container">
         <div class="shop-food-content">
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/nl.jpg" alt="Nasi Lemak" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Nasi Lemak</h3>
-              <div class="shop-food-card-price">$7</div>
-              <p class="shop-food-card-desc">Fragrant rice dish with coconut milk and condiments.</p>
-              <button class="btn btn-add" onclick="addToCart('Nasi Lemak', 7)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/rc.jpg" alt="Roti Canai" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Roti Canai</h3>
-              <div class="shop-food-card-price">$2</div>
-              <p class="shop-food-card-desc">Flaky, crispy flatbread served with curry sauce.</p>
-              <button class="btn btn-add" onclick="addToCart('Roti Canai', 2)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/ckt.jpg" alt="Char Kway Teow" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Char Kway Teow</h3>
-              <div class="shop-food-card-price">$10</div>
-              <p class="shop-food-card-desc">Stir-fried flat rice noodles with prawns and eggs.</p>
-              <button class="btn btn-add" onclick="addToCart('Char Kway Teow', 10)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/hcr.png" alt="Hainanese Chicken Rice" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Hainanese Chicken Rice</h3>
-              <div class="shop-food-card-price">$8</div>
-              <p class="shop-food-card-desc">Poached chicken with fragrant rice and sauce.</p>
-              <button class="btn btn-add" onclick="addToCart('Hainanese Chicken Rice', 8)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/ls.webp" alt="Laksa Sarawak" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Laksa Sarawak</h3>
-              <div class="shop-food-card-price">$8</div>
-              <p class="shop-food-card-desc">Spicy noodle soup with coconut milk and seafood.</p>
-              <button class="btn btn-add" onclick="addToCart('Laksa Sarawak', 8)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/sty.webp" alt="Satay" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Satay</h3>
-              <div class="shop-food-card-price">$5</div>
-              <p class="shop-food-card-desc">Grilled skewered meat served with peanut sauce.</p>
-              <button class="btn btn-add" onclick="addToCart('Satay', 5)">Add to cart</button>
-            </div>
-          </div>
+            <?php
+                // Database connection
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "FCMSUserMgmt";
+
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                // Check connection
+                if (!$conn) { die("Connection failed: " . mysqli_connect_error()); }
+
+                // Query to fetch menu items
+                $sql = "SELECT foodName, foodPrice, description, imagePath FROM MenuItems1";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "<div class='shop-food-card'>";
+                        echo "<div class='shop-food-card-img'>";
+                        echo "<img src='" . $row["imagePath"] . "' alt='" . $row["foodName"] . "' />";
+                        echo "</div>";
+                        echo "<div class='shop-food-card-text'>";
+                        echo "<h3 class='shop-food-card-title'>" . $row["foodName"] . "</h3>";
+                        echo "<div class='shop-food-card-price'>$" . number_format($row["foodPrice"], 2) . "</div>";
+                        echo "<p class='shop-food-card-desc'>" . $row["description"] . "</p>";
+                        echo "<button class='btn btn-add' onclick=\"addToCart('" . $row["foodName"] . "', " . $row["foodPrice"] . ")\">Add to cart</button>";
+                        echo "<button class='btn btn-favourite' onclick=\"addToFavorites('" . $row["foodName"] . "')\">Add to favourites</button>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                } else { echo "<p>No menu items available.</p>"; }
+
+                // Close connection
+                mysqli_close($conn);
+            ?>
         </div>
       </div>
     </section>
@@ -95,5 +66,6 @@
     <!--Footer-->
     <?php include("footer.php"); ?>
     <script src="./js/cart.js"></script>
+    <script src="./js/favourite.js"></script>
   </body>
 </html>

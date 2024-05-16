@@ -1,12 +1,10 @@
-body
-{
+body {
     height: auto;
     width: auto;
     background-color: gainsboro;
 }
 
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,16 +16,14 @@ body
 section { display: flex; }
 
 /* ======= Main Content Styling ======= */
-.main-content
-{
+.main-content {
     margin: auto;
     padding: auto;
     width: 100%;
     height: 100%;
 }
 
-.main-top
-{
+.main-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,8 +38,7 @@ h1 img { width: 5%; }
 
 .admin { float: right; }
 
-.admin button
-{
+.admin button {
     height: 24px;
     font-size: 24px;
     padding: auto;
@@ -56,8 +51,7 @@ h1 img { width: 5%; }
 
 .admin img { width: 15%; }
 
-.btd-button
-{
+.btd-button {
     height: 24px;
     font-size: 24px;
     padding: auto;
@@ -77,16 +71,14 @@ h1 img { width: 5%; }
 
 .color-box a { text-decoration: none; }
 
-.color-box
-{
+.color-box {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
 }
 
-.button
-{
+.button {
     display: flex;
     height: 170px;
     flex-direction: column;
@@ -98,22 +90,37 @@ h1 img { width: 5%; }
     cursor: pointer;
 }
 
-.button img
-{
-    padding-bottom: 5px;
-}
+.button img { padding-bottom: 5px; }
+
+.orange { background-color: rgb(255, 199, 125); }
+.orange img { width: 35px; height: 40px; }
+
+.pink { background-color: rgb(255, 178, 232); }
+.pink img { width: 35px; height: 40px; }
+
+.purple { background-color: rgb(147, 158, 255); }
+.purple img { width: 35px; height: 40px; }
 
 .red { background-color: rgb(255, 178, 178); }
-
-.red img { width: 35px; height: 40px; }
+.red img { width: 40px; height: 40px; }
 
 .green { background-color: rgb(184, 255, 178); }
-
 .green img { width: 35px; height: 40px; }
 
+.yellow { background-color: rgb(255, 247, 178); }
+.yellow img { width: 28px; height: 40px; }
+
+.lightblue { background-color: rgb(178, 243, 255); }
+.lightblue img { width: 45px; height: 40px; }
+
+.lightgreen { background-color: rgb(154, 255, 199); }
+.lightgreen img { width: 35px; height: 40px; }
+
+.aqua { background-color: rgb(154, 252, 255); }
+.aqua img { width: 35px; height: 40px; }
+
 /* ======== Styling Recent Activity ======== */
-.activity
-{
+.activity {
     padding: 1em 3em;
     margin: 10px 0;
 }
@@ -122,8 +129,7 @@ h1 img { width: 5%; }
 
 tr { row-gap: 0px; }
 
-th
-{
+th {
     line-height: 40px;
     text-align: left;
 }
@@ -132,8 +138,7 @@ td { line-height: 28px; }
 
 td, th { margin: 0; }
 
-@media screen and (max-width:630px)
-{
+@media screen and (max-width:630px) {
     section { display: none; }
 
     .warning
@@ -151,8 +156,7 @@ td, th { margin: 0; }
     }
 }
 
-.cre-form
-{
+.cre-form {
     max-width: 400px;
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -161,8 +165,7 @@ td, th { margin: 0; }
 	margin-top: 1em;
 }
 
-.cre-container input[type=text], .cre-container input[type=password]
-{
+.cre-container input[type=text], .cre-container input[type=password] {
     width: 100%;
     padding: 0.7em;
     margin: 0;
@@ -171,8 +174,7 @@ td, th { margin: 0; }
     background: #f1f1f1;
 }
 
-.cre-btn
-{
+.cre-btn {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -185,21 +187,18 @@ td, th { margin: 0; }
 
 .cre-btn:hover { opacity:1; }
 
-.cre-container
-{
+.cre-container {
     width: 100%;
     height: auto;
     padding: 16px;
 }
 
-.grid-container
-{
+.grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
 }
   
-.grid-container > div
-{
+.grid-container > div {
     text-align: left;
     justify-content: center;
     margin: 8px auto;

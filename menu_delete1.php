@@ -6,7 +6,7 @@
         <meta name="description" content="Admin Create New User Page"/>
 		<meta name="keywords" content="HTML5, CSS, PHP"/>
 		<meta name="author" content="Wong Kiing Xuan"/>
-        <title> Admin - Delete User </title>
+        <title> Admin - Delete Menu </title>
         <link rel="stylesheet" href="./css/admin.css">
     </head>
     <body>
@@ -21,28 +21,28 @@
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error() . "\n");
             }
+            
+            $foodName = "";
 
-            if (isset($_POST["username"])) {
-				$UserName = $_POST["username"];
+            if (isset($_POST["foodName"])) {
+				$foodName = $_POST["foodName"];
 			} else {
 				require ("error.php"); 
 			}
 
-            // Escape the Name to prevent SQL injection
-            $UserName = mysqli_real_escape_string($conn, $UserName);
+            $foodName = $_POST["foodName"];
         
             // Perform the SQL deletion
-            $sql = "DELETE FROM UserList WHERE UserName = '$UserName'";
+            $sql = "DELETE FROM menuitems1 WHERE foodName = '$foodName'";
         
             if (!mysqli_query($conn, $sql)) {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            } else {
-                header("Location: user_view.php");
-                exit();
             }
             
             // Close the database connection
-            mysqli_close($conn);
+            $conn->close();
+
+            header("Location: menu_view1.php");
         ?>
     </body>
 </html>

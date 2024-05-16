@@ -1,298 +1,33 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.profile-container {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* header */
-.header {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  height: 64px;
-  z-index: 3;
-}
-
-.header-support {
-  width: 100%;
-  height: 64px;
-}
-
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.header li a {
-  display: block;
-  padding: 20px 20px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
-}
-
-.header li a:hover, .header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-
-.header.logo {
-  display: block;
-  float: left;
-  padding-left: 50px;
-  padding-right: 10px;
-  padding-top: 3px;
-}
-
-.header.logo img {
-  height: 55px;
-  width: 110px;
-}
-/* menu */
-.header.left-menu {
-  display: block;
-  float: left;
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-.header.menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-/* menu btn */
-.dropdown {
-  float: left;
-  overflow: hidden;
-  height: 64px;
-  display: flex;
-  align-items: center;
-}
-
-.dropdown .dropbtn {
-  display: block;
-  padding: 20px 20px;
-  border: none;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
-  font-size: inherit;
-  background-color: #fff;
-}
-
-.dropdown .dropbtn:hover {
-  background-color: #f4f4f4;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  z-index: 100;
-}
-
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #f4f4f4;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .left-menu {
-    clear: none;
-    float: left;
-    max-height: none;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-/*This is how you implement the words based on their size, different size, different looks, like h1, h3 and p*/
-#main h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: black;
-  padding: 0;
-  margin: 0;
-}
-#main h3 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 18px;
-  line-height: 0;
-  font-weight: 400;
-  letter-spacing: 8px;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-  color: black;
-}
-
-#main h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 70px;
-  letter-spacing: 10px;
-  text-align: center;
-  color: white;
-  font-weight: 400;
-  text-transform: uppercase;
-  z-index: 10;
-  opacity: 0.9;
-  text-shadow: 2px 2px #000000;
-}
-
-#main p {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-}
-/*this is where the title will be in the middle */
-#main .title {
-  background: white;
-  padding: 60px;
-  margin: 0 auto;
-  text-align: center;
-}
-#main .title h1 {
-  font-size: 35px;
-  letter-spacing: 8px;
-}
-
-/* Section */
-/**************************/
-#main .sec1 {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background-image: url(../images/main1.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-#main .sec2 {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background-image: url(../images/main2.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-#main .sec3 {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  background-image: url(../images/main3.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-.btn-add {
-  width: 100%;
-  padding: 0.85rem;
-  margin-top: 1.5rem;
-  background-color: saddlebrown;
-  color: #f1f1f1;
-  border: 0;
-  border-radius: 0.5rem;
-}
-
-.btn-add:hover {
-  opacity: 0.8;
-}
-
-
-/*start of coding for the elements in the page*/
-
-/* Resetting default margin and padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Global styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa; /* Use a light background color */
-}
-
-.container {
-  display: flex;
-  margin: 100px 50px;
+  margin: auto;
+  width: 1000px;
+  height: 600px;
 }
 
 /* Profile section styles */
 .profile {
-  flex: 0.5;
   margin-right: 10px;
   background-color: #fff;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
   border-radius: 5px;
   padding: 20px;
+  width: 300px
 }
 
 .profile-title {
   font-size: 20px;
+  margin-left: 10px;
   margin-bottom: 10px;
 }
 
 .profile-img{
-  width: 25%; /* Make the profile picture smaller */
-  height: 25%;
-  border-radius: 50%; /* Make the profile picture round */
-  margin-right: 10px;
+  width: 58px; /* Make the profile picture smaller */
+  height: 51px;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;
 }
 
 /* Borderpage link styles */
@@ -306,42 +41,35 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/*.borderpage-link:first-child {
-  color: #fff;
-  background-color: #536dfe;
-} */
-
 .borderpage-link:hover {
   background-color: #f1f5f9;
   color: #1e293b;
 }
+
 /* Highlight active section */
 .borderpage-link.active {
   background-color: #536dfe;
   color: #fff;
 }
+
 /* Account section styles */
 .account {
-  flex: 0.5;
   margin-left: 10px;
   background-color: #fff;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
   border-radius: 5px;
   padding: 20px;
-  width: 150%;
+  width: 700px;
   height: 100%;
 }
 
 .account-title {
   font-size: 20px;
   margin-bottom: 10px;
-  
 }
 
 /* Input styles */
-.input-container {
-  margin-bottom: 15px;
-}
+.input-container { margin-bottom: 15px; }
 
 .input-container label {
   color: #768499;
@@ -349,26 +77,22 @@ body {
   margin-bottom: 5px;
 }
 
-.input-container input,
-.input-container textarea {
+.input-container input, .input-container textarea {
   width: 100%;
   padding: 10px;
   border: 1.5px solid #768499;
   border-radius: 5px;
   transition: border-color 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.input-container input:focus,
-.input-container textarea:focus {
+.input-container input:focus, .input-container textarea:focus {
   outline: none;
   border-color: #536dfe;
 }
 
 /* Button styles */
-.btn-cancel,
-.btn-save,
-.btn-membership,
-.btn-logout {
+.btn-cancel, .btn-save, .btn-membership, .btn-logout {
   width: 4cm;
   height: 1cm;
   cursor: pointer;
@@ -397,17 +121,11 @@ body {
   background-color: #dc143c;
 }
 
-.btn-cancel:hover {
-  background-color: #f1f5f9;
-}
+.btn-cancel:hover { background-color: #f1f5f9; }
 
-.btn-save:hover {
-  background-color: #4053c9;
-}
+.btn-save:hover { background-color: #4053c9; }
 
-.btn-logout:hover {
-  background-color: #ff0000;
-}
+.btn-logout:hover { background-color: #ff0000; }
 
 .btn-membership{
   color: #fff;
@@ -416,9 +134,7 @@ body {
   padding: 5px;
 }
 
-.btn-membership:hover{
-  background-color: #7CFC00;
-}
+.btn-membership:hover{ background-color: #7CFC00; }
 
 /*For check box*/
 .checkbox-container {
@@ -453,3 +169,5 @@ body {
 .checkbox-container input[type="checkbox"] + label:hover {
   text-decoration: underline; /* Add underline effect on label hover */
 }
+
+.checkbox-container label { margin-bottom: 0; }

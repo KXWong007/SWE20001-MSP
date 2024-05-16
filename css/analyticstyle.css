@@ -1,0 +1,31 @@
+body {
+    background-color: gainsboro;
+    /* Set the background color to gainsboro */
+}
+
+.dashboard-title {
+    font-size: 36px;
+    /* Adjust the font size as needed */
+    font-family: Tahoma, sans-serif;
+    /* Set the font family to Tahoma */
+    text-align: center;
+    /* Align the text to the center */
+    margin: 35px;
+}
+
+#chartContainer {
+    height: 370px;
+    width: 95%;
+    margin: 0 auto 20px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.chart {
+    width: 45%;
+    height: 450px;
+}

@@ -11,18 +11,20 @@
 	</head>
 	<body>
 		<?php
-			$Name = "";
 			$UserName = "";
+			$Name = "";
+			
 			$Email = "";
 			$Password = "";
 
-			if (isset($_POST["name"])) {
-				$Name = $_POST["name"];
+			
+			if (isset($_POST["username"])) {
+				$UserName = $_POST["username"];
 			} else {
 				require ("error.php"); 
 			}
-			if (isset($_POST["username"])) {
-				$UserName = $_POST["username"];
+			if (isset($_POST["name"])) {
+				$Name = $_POST["name"];
 			} else {
 				require ("error.php"); 
 			}
@@ -44,13 +46,10 @@
             
             $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-            if (!$conn)
-            {
-                die("Connection failed: " . mysqli_connect_error() . "\n");
-            }
-            
-            $Name = $_POST["name"];
+            if (!$conn) { die("Connection failed: " . mysqli_connect_error() . "\n"); }
             $UserName = $_POST["username"];
+            $Name = $_POST["name"];
+            
             $Email = $_POST["email"];
             $Password = $_POST["psw"];
 

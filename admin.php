@@ -25,7 +25,7 @@
             <!-- User Top Navigation Starts from Here -->
             <div class="main-content">
                 <div class="main-top">
-                    <h1> <img src="images/user-tie-solid.png" alt="Exflora Logo"> Welcome Admin!</h1> <br>
+                    <h1> <img src="images/user-tie-solid.png" alt="FCMS Logo"> Welcome Admin!</h1> <br>
                     <div class="admin">
                         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                             <button type="submit" name="logout"> <img src="images/power-off-solid.png"/> Logout </button>
@@ -37,16 +37,22 @@
                 <div class="dashboard">
                     <h2 class="heading"> Dashboard </h2>
                     <div class="color-box">
-                        <a href="user_view.php">
-                            <button class="button red">
-                                <img src="images/users-viewfinder-solid.png"/>
-                                <h3> View User List </h3>
+                        <a href="user_data.php">
+                            <button class="button orange">
+                                <img src="images/circle-user-solid.png"/>
+                                <h3> View User Data </h3>
                             </button>
                         </a>
-                        <a href="view_order.php">
-                            <button class="button green">
-                                <img src="images/rectangle-list-regular.png"/>
-                                <h3> View FCMS Order List </h3>
+                        <a href="dashboard.php">
+                            <button class="button pink">
+                                <img src="images/query_stats.png"/>
+                                <h3> View Analytic Data </h3>
+                            </button>
+                        </a>
+                        <a href="menu_view.php">
+                            <button class="button purple">
+                                <img src="images/menu_icon.png"/>
+                                <h3> View Food Menus </h3>
                             </button>
                         </a>
                     </div>
@@ -67,6 +73,13 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td> king </td>
+                                    <td> king@gmail.com </td>
+                                    <td> 01-05-2024 </td>
+                                    <td> User </td>
+                                    <td> Offline </td>
+                                </tr>
                                 <tr>
                                     <td> MeiMei456 </td>
                                     <td> meimei@gmail.com </td>

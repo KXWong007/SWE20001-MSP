@@ -8,7 +8,6 @@ function toggleCartSidebar() {
     }
 }
 
-
 // Add an item to the cart with a "remove" button
 function addToCart(name, price) {
     const cartItems = document.getElementById("cart-items");
@@ -55,26 +54,4 @@ function updateTotal(price) {
     const currentTotal = parseFloat(cartTotal.textContent.replace("Total: $", ""));
     const newTotal = currentTotal + price;
     cartTotal.textContent = `Total: $${newTotal.toFixed(2)}`;
-}
-
-// Functions to increase or decrease item quantity
-function increaseQuantity(name, price) {
-    const cartItem = document.querySelector(`[data-name="${name}"]`);
-    const quantitySpan = cartItem.querySelector(".cart-item-quantity");
-    const currentQuantity = parseInt(quantitySpan.textContent, 10);
-    quantitySpan.textContent = currentQuantity + 1;
-    updateTotal(price);
-}
-
-function decreaseQuantity(name, price) {
-    const cartItem = cartItem.querySelector(".cart-item-quantity");
-    if (currentQuantity > 1) {
-        quantitySpan.textContent = currentQuantity - 1;
-        updateTotal(-price);
-    }
-}
-
-// Function to proceed to checkout
-function proceedToCheckout() {
-    alert("Proceeding to checkout...");
 }

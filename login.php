@@ -19,7 +19,7 @@
 
         <?php
             // PHP code for handling login
-            session_start();
+            if(!session_id()) session_start();
 
             // set the servername, username, password and database name
             $servername = "localhost";
@@ -33,10 +33,7 @@
             // Create connection
             $conn = mysqli_connect($servername, $username, $password, $dbname);
             // Check connection
-            if (!$conn)
-            {
-                die("Connection failed: " . mysqli_connect_error() . "\n");
-            }
+            if (!$conn) { die("Connection failed: " . mysqli_connect_error() . "\n"); }
 
             if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
                 $UserName = $_POST["username"];
@@ -47,6 +44,7 @@
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
+                    $_SESSION['loggedin'] = true;
                     if ($UserName == "admin" && $Password = "admin") {
                         header("Location: admin.php");
                     } else {

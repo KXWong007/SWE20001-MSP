@@ -14,6 +14,8 @@
 
     <!--Create User Database-->
     <?php include ("user_db-table.php"); ?>
+    <?php include ("itemsolddb.php"); ?>
+    <?php include ("menu_db-table.php"); ?>
 
     <div id="main">
       <section>

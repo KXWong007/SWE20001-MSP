@@ -5,7 +5,7 @@ document.getElementById('subscription-form').addEventListener('submit', function
     alert("Thank you for subscribing. Have a nice day!");
   
     // Redirect user to index.html after displaying the notification
-    window.location.href = "index.php";
+    window.location.href = "profile.php";
   });
   
   

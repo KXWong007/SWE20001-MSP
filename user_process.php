@@ -9,7 +9,6 @@
 	</head>
 	<body>
         <h1>Account Create Confirmation</h1>
-
         <?php
             //assign the variables to empty here
             $Name = "";
@@ -67,10 +66,7 @@
             $conn = mysqli_connect($servername, $username, $password, $dbname);
 
             // Check connection
-            if (!$conn)
-            {
-                die("Connection failed: " . mysqli_connect_error() . "\n");
-            }
+            if (!$conn) { die("Connection failed: " . mysqli_connect_error() . "\n"); }
             
             $Name = $_POST["name"];
             $UserName = $_POST["username"];
@@ -87,5 +83,8 @@
             
             mysqli_close($conn);
         ?>
+        <a class="btd-button" href="index.php">
+            <button type="submit" name="btd" style="height: 28px; font-size: 16px; margin: 20px 3px; padding: auto; width: auto; border: 2px solid black; background-color: lightgreen; cursor: pointer;"> Back to Home Page </button>
+        </a>
     </body>
 </html>

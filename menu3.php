@@ -21,72 +21,43 @@
     <section>
       <div class="container">
         <div class="shop-food-content">
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/cc.webp" alt="Chicken Chop" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Chicken Chop</h3>
-              <div class="shop-food-card-price">$24</div>
-              <p class="shop-food-card-desc">Grilled or fried chicken cutlet with sauce.</p>
-              <button class="btn btn-add" onclick="addToCart('Chicken Chop', 24)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/fnc.jpeg" alt="Fish and Chips" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Fish and Chips</h3>
-              <div class="shop-food-card-price">$30</div>
-              <p class="shop-food-card-desc">Fried fish fillets served with fries.</p>
-              <button class="btn btn-add" onclick="addToCart('Fish and Chips', 30)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/sb.webp" alt="Spaghetti Bolognese" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Spaghetti Bolognese</h3>
-              <div class="shop-food-card-price">$26</div>
-              <p class="shop-food-card-desc">Pasta with meaty tomato sauce.</p>
-              <button class="btn btn-add" onclick="addToCart('Spaghetti Bolognese', 26)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/lc.webp" alt="Grilled Lamb Chops" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Grilled Lamb Chops</h3>
-              <div class="shop-food-card-price">$45</div>
-              <p class="shop-food-card-desc">Tender lamb chops grilled to perfection.</p>
-              <button class="btn btn-add" onclick="addToCart('Grilled Lamb Chops', 45)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/bb.jpg" alt="Beef Burger" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Beef Burger</h3>
-              <div class="shop-food-card-price">$35</div>
-              <p class="shop-food-card-desc">Grilled beef patty served in a bun.</p>
-              <button class="btn btn-add" onclick="addToCart('Beef Burger', 35)">Add to cart</button>
-            </div>
-          </div>
-          <div class="shop-food-card">
-            <div class="shop-food-card-img">
-              <img src="./images/cs.webp" alt="Caesar Salad" />
-            </div>
-            <div class="shop-food-card-text">
-              <h3 class="shop-food-card-title">Caesar Salad</h3>
-              <div class="shop-food-card-price">$23</div>
-              <p class="shop-food-card-desc">Salad with romaine lettuce, croutons, and dressing.</p>
-              <button class="btn btn-add" onclick="addToCart('Caesar Salad', 23)">Add to cart</button>
-            </div>
-          </div>
+            <?php
+                // Database connection
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "FCMSUserMgmt";
+
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                // Check connection
+                if (!$conn) { die("Connection failed: " . mysqli_connect_error()); }
+
+                // Query to fetch menu items
+                $sql = "SELECT foodName, foodPrice, description, imagePath FROM MenuItems3";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "<div class='shop-food-card'>";
+                        echo "<div class='shop-food-card-img'>";
+                        echo "<img src='" . $row["imagePath"] . "' alt='" . $row["foodName"] . "' />";
+                        echo "</div>";
+                        echo "<div class='shop-food-card-text'>";
+                        echo "<h3 class='shop-food-card-title'>" . $row["foodName"] . "</h3>";
+                        echo "<div class='shop-food-card-price'>$" . number_format($row["foodPrice"], 2) . "</div>";
+                        echo "<p class='shop-food-card-desc'>" . $row["description"] . "</p>";
+                        echo "<button class='btn btn-add' onclick=\"addToCart('" . $row["foodName"] . "', " . $row["foodPrice"] . ")\">Add to cart</button>";
+                        echo "<button class='btn btn-favourite' onclick=\"addToFavorites('" . $row["foodName"] . "')\">Add to favourites</button>";
+                        echo "</div>";
+                        echo "</div>";
+                    }
+                } else { echo "<p>No menu items available.</p>"; }
+
+                // Close connection
+                mysqli_close($conn);
+            ?>
         </div>
       </div>
     </section>
@@ -95,5 +66,6 @@
     <!--Footer-->
     <?php include("footer.php"); ?>
     <script src="./js/cart.js"></script>
+    <script src="./js/favourite.js"></script>
   </body>
 </html>
