@@ -12,6 +12,5 @@
 		<h1>Error Messages:</h1>
 		<h3>404</h3>
 		<p>Please click this <a href="index.php">link</a> to return to the Homepage.</p>
-		
 	</body>
 </html>

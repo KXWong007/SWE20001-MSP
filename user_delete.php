@@ -18,15 +18,9 @@
 
             $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error() . "\n");
-            }
+            if (!$conn) { die("Connection failed: " . mysqli_connect_error() . "\n"); }
 
-            if (isset($_POST["username"])) {
-				$UserName = $_POST["username"];
-			} else {
-				require ("error.php"); 
-			}
+            if (isset($_POST["username"])) { $UserName = $_POST["username"]; } else { require ("error.php"); }
 
             // Escape the Name to prevent SQL injection
             $UserName = mysqli_real_escape_string($conn, $UserName);
@@ -34,9 +28,7 @@
             // Perform the SQL deletion
             $sql = "DELETE FROM UserList WHERE UserName = '$UserName'";
         
-            if (!mysqli_query($conn, $sql)) {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            } else {
+            if (!mysqli_query($conn, $sql)) { echo "Error: " . $sql . "<br>" . mysqli_error($conn); } else {
                 header("Location: user_view.php");
                 exit();
             }

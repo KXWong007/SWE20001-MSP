@@ -1,11 +1,7 @@
 function toggleCartSidebar() {
     console.log("Basket button clicked");
     const sidebar = document.getElementById("cart-sidebar");
-    if (sidebar.style.right === "0px") {
-        sidebar.style.right = "-300px"; // Hide the sidebar
-    } else {
-        sidebar.style.right = "0px"; // Show the sidebar
-    }
+    if (sidebar.style.right === "0px") { sidebar.style.right = "-300px"; /* Hide the sidebar */ } else { sidebar.style.right = "0px"; /* Show the sidebar */ }
 }
 
 // Add an item to the cart with a "remove" button
@@ -23,9 +19,7 @@ function addToCart(name, price) {
     // Create a remove button
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
-    removeButton.onclick = function () {
-        removeItem(name, price);
-    };
+    removeButton.onclick = function () { removeItem(name, price); };
 
     // Add the item text and remove button to the cart item
     cartItem.appendChild(itemText);

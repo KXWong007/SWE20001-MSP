@@ -6,8 +6,6 @@ function addToFavorites(foodName) {
         body: JSON.stringify({ foodName: foodName })
     })
     .then(response => response.json())
-    .then(data => {
-        if (data.success) { alert('Added to favourites!'); } else { alert('Failed to add to favourites.'); }
-    })
+    .then(data => { if (data.success) { alert('Added to favourites!'); } else { alert('Failed to add to favourites.'); } })
     .catch((error) => { console.error('Error:', error); });
 }

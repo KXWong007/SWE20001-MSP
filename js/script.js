@@ -10,34 +10,17 @@ const totalSteps = 8; // Total number of steps
 function updateProgress(step) {
     const percent = (step / totalSteps) * 100;
     progress.style.width = percent + '%';
-    if (step === totalSteps) {
-        setTimeout(() => {
-            orderCompleted.style.display = 'block';
-        }, 500);
-    }
+    if (step === totalSteps) { setTimeout(() => { orderCompleted.style.display = 'block'; }, 500); }
 }
 
 // Function to handle next step button click
-function nextStep() {
-    if (currentStep < totalSteps) {
-        currentStep++;
-        updateProgress(currentStep);
-    }
-}
+function nextStep() { if (currentStep < totalSteps) { currentStep++; updateProgress(currentStep); } }
 
 // Automatically progress (seconds)
-const intervalId = setInterval(() => {
-    nextStep();
-    if (currentStep === totalSteps) {
-        clearInterval(intervalId);
-    }
-}, 1000);
+const intervalId = setInterval(() => { nextStep(); if (currentStep === totalSteps) { clearInterval(intervalId); } }, 1000);
 
 // Handle return to home button click
-returnBtn.addEventListener('click', () => {
-    // Replace this with the URL of your home page
-    window.location.href = 'index.php';
-});
+returnBtn.addEventListener('click', () => { /* Replace this with the URL of your home page */ window.location.href = 'index.php'; });
 
 //Paygate function (not working properly)
 document.getElementById('payment-form').addEventListener('submit', function(event) {
@@ -48,31 +31,16 @@ document.getElementById('payment-form').addEventListener('submit', function(even
   var cvv = document.getElementById('cvv').value.trim();
   
   // Basic validation
-  if (!cardNumber || !expiryDate || !cvv) {
-    document.getElementById('message').innerText = 'Please fill in all fields.';
-    return;
-  }
+  if (!cardNumber || !expiryDate || !cvv) { document.getElementById('message').innerText = 'Please fill in all fields.'; return; }
 
   // Simulate payment processing
-  setTimeout(function() {
-    document.getElementById('message').innerText = 'Payment successful!';
-    // You can redirect the user to a success page or perform other actions here
-    window.location.href = 'progbar.php';
-  }, 2000);
-});
+  setTimeout(function() { document.getElementById('message').innerText = 'Payment successful!'; /* You can redirect the user to a success page or perform other actions here */ window.location.href = 'progbar.php'; }, 2000); });
 
-document.getElementById('edit-btn').addEventListener('click', function() {
-    document.getElementById('edit-modal').style.display = 'block';
-});
+document.getElementById('edit-btn').addEventListener('click', function() { document.getElementById('edit-modal').style.display = 'block'; });
 
-document.getElementsByClassName('close')[0].addEventListener('click', function() {
-    document.getElementById('edit-modal').style.display = 'none';
-});
+document.getElementsByClassName('close')[0].addEventListener('click', function() { document.getElementById('edit-modal').style.display = 'none'; });
 
-document.getElementById('logout-btn').addEventListener('click', function() {
-    // Add your logout functionality here
-    alert('Logged out!');
-});
+document.getElementById('logout-btn').addEventListener('click', function() { /* Add your logout functionality here */ alert('Logged out!'); });
 
 document.getElementById('edit-form').addEventListener('submit', function(event) {
     event.preventDefault();

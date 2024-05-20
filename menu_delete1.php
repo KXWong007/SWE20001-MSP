@@ -18,31 +18,23 @@
 
             $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error() . "\n");
-            }
+            if (!$conn) { die("Connection failed: " . mysqli_connect_error() . "\n"); }
             
-            $foodName = "";
-
             if (isset($_POST["foodName"])) {
-				$foodName = $_POST["foodName"];
-			} else {
-				require ("error.php"); 
-			}
+                $foodName = $_POST["foodName"];
 
-            $foodName = $_POST["foodName"];
-        
-            // Perform the SQL deletion
-            $sql = "DELETE FROM menuitems1 WHERE foodName = '$foodName'";
-        
-            if (!mysqli_query($conn, $sql)) {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
+                // Perform the SQL deletion
+                $sql = "DELETE FROM menuitems1 WHERE foodName = '$foodName'";
             
-            // Close the database connection
-            $conn->close();
+                if (!mysqli_query($conn, $sql)) { echo "Error: " . $sql . "<br>" . mysqli_error($conn); }
 
-            header("Location: menu_view1.php");
+                // Close the database connection
+                $conn->close();
+                
+                // Redirect back to menu_view1.php
+                header("Location: menu_view1.php");
+                exit();
+            }
         ?>
     </body>
 </html>

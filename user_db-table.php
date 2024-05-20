@@ -249,9 +249,8 @@
 
             // Insert into favorites table (create table if not exists)
             $sql = "CREATE TABLE IF NOT EXISTS Favourite (
-                        ID INT AUTO_INCREMENT PRIMARY KEY,
                         UserName VARCHAR(255) NOT NULL,
-                        FoodName VARCHAR(255) NOT NULL
+                        FoodName VARCHAR(255) NOT NULL PRIMARY KEY
                     )";
 
             if (!mysqli_query($conn, $sql)) { echo "Error creating table: " . mysqli_error($conn) ."\n"; }

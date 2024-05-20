@@ -40,12 +40,12 @@
                         <a href="menu_view3.php">
                             <button class="button yellow">
                                 <h3> Menu Items 3 </h3>
-                         </button>
+                            </button>
                         </a>    
                         <a href="menu_view4.php">
                             <button class="button aqua">
                                 <h3> Menu Items 4 </h3>
-                         </button>
+                            </button>
                         </a>            
                     </div>
                 </div>

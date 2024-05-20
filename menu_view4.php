@@ -51,6 +51,7 @@
                                             <th><a href='?orderBy=foodName&order=" . ($orderBy == 'foodName' ? ($order == 'ASC' ? 'DESC' : 'ASC') : 'ASC') . "'>Food Name</a></th>
                                             <th><a href='?orderBy=foodPrice&order=" . ($orderBy == 'foodPrice' ? ($order == 'ASC' ? 'DESC' : 'ASC') : 'ASC') . "'>Food Price</a></th>
                                             <th><a href='?orderBy=description&order=" . ($orderBy == 'description' ? ($order == 'ASC' ? 'DESC' : 'ASC') : 'ASC') . "'>Description</a></th>
+                                            <th style='text-align: center'>Action</th>
                                         </tr>";
 
                                 while ($row = mysqli_fetch_assoc($result)) {
@@ -58,6 +59,12 @@
                                             <td>{$row['foodName']}</td>
                                             <td>{$row['foodPrice']}</td>
                                             <td>{$row['description']}</td>
+                                            <td class='center'>
+                                                <form action='menu_delete4.php' method='post'>
+                                                    <input type='hidden' name='foodName' value='{$row['foodName']}'>
+                                                    <button type='submit'>Remove</button>
+                                                </form>
+                                            </td>
                                         </tr>";
                                 }
                                 echo "</table>";
@@ -66,9 +73,9 @@
                         mysqli_close($conn);
                     ?><br>
 
-                    <div class="grid-container">
+                    <div class="center-container">
                         <div>
-                            <h2 class="heading"> Add a new menu </h2>
+                            <h2 class="heading"> Add a new item </h2>
                             <form class="cre-form" action="menu_create4.php" method="post">
                                 <div class="cre-container">
                                     <label for="foodName"><b> Food Name</b></label><br>
@@ -83,18 +90,7 @@
                                     <label><b>Food Image</b></label><br>
                                     <input type="file" name="imagePath" required><br><br>
                                     
-                                    <button type="submit" class="cre-btn" name="addItem">Add Menu</button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div>
-                        <h2 class="heading"> Remove an existing menu </h2>
-                            <form class="cre-form" action="menu_delete4.php" method="post">
-                                <div class="cre-container">
-                                    <label for="foodName"><b>Food Name</b></label><br>
-                                    <input type="text" placeholder="Enter Food Name" id="foodName" name="foodName" required><br><br>
-                                    <button type="submit" class="cre-btn">Remove Menu</button>
+                                    <button type="submit" class="cre-btn" name="addItem">Add Item</button>
                                 </div>
                             </form>
                         </div>

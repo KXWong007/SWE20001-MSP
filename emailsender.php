@@ -23,11 +23,7 @@
         $headers = "From: adletbek9@gmail.com"; 
 
         // Send email
-        if(mail($to, $subject, $message, $headers)) {
-            echo "Email sent successfully!";
-        } else {
-            echo "Email sending failed.";
-        }
+        if(mail($to, $subject, $message, $headers)) { echo "Email sent successfully!"; } else { echo "Email sending failed."; }
     }
     echo '<script>
             alert("Thank you for your purchase! A receipt has been sent to your email.");

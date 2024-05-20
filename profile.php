@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="./css/profilestyle.css">
         <title>Profile Page</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
     </head>
     <body>
         <!--Header-->
@@ -35,7 +35,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="section-container">
                 <form class="account" id="account-section">
                     <!-- Account Edit Section -->
@@ -178,7 +177,7 @@
                     <div class="account-header">
                         <h1 class="account-title">Invoice</h1>
                     </div>
-                    <div class="logout-edit">
+                    <div class="account-edit">
                         <?php
                             // set the servername, username, and password
                             $servername = "localhost";
@@ -229,7 +228,7 @@
                     <div class="account-header">
                         <h1 class="account-title">Preference</h1>
                     </div>
-                    <div class="logout-edit">
+                    <div class="account-edit">
                         <?php
                             // set the servername, username, and password
                             $servername = "localhost";
@@ -270,44 +269,38 @@
                 </form>
 
                 <!-- Feedback Section -->
-                <form class="account" id="feedback-section" style="display: none;">
+                <form class="account" id="feedback-section" style="display: none;" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="mt-3">
                     <div class="account-header">
                         <h1 class="account-title">Feedback Form</h1>
                     </div>
-                    <div class="logout-edit">
-                        <div class="container">
-                            <?php
-                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                    $name = htmlspecialchars($_POST['name']);
-                                    $email = htmlspecialchars($_POST['email']);
-                                    $review = htmlspecialchars($_POST['review']);
-                                    
-                                    echo "<p>Thank you, $name, for your feedback!</p>";
-                                }
-                            ?>
-                            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="mt-3">
-                                <div class="form-group">
-                                    <label for="name">Name:</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email:</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="review">Feedback:</label>
-                                    <textarea class="form-control" id="review" name="review" rows="4" required></textarea>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                    <div class="account-edit">
+                        <?php
+                            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                $name = htmlspecialchars($_POST['name']);
+                                $email = htmlspecialchars($_POST['email']);
+                                $review = htmlspecialchars($_POST['review']);
+                                echo "<p>Thank you, $name, for your feedback!</p>";
+                            }
+                        ?>
+                        <div class="input-container">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
                         </div>
-                        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                        <div class="input-container">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="review">Feedback:</label>
+                            <textarea class="form-control" id="review" name="review" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
         <script src="./js/profile.js"></script>
 
         <!--Footer-->

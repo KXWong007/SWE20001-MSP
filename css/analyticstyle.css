@@ -1,7 +1,4 @@
-body {
-    background-color: gainsboro;
-    /* Set the background color to gainsboro */
-}
+body { background-color: gainsboro; /* Set the background color to gainsboro */ }
 
 .dashboard-title {
     font-size: 36px;

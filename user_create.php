@@ -13,31 +13,13 @@
 		<?php
 			$UserName = "";
 			$Name = "";
-			
 			$Email = "";
 			$Password = "";
-
 			
-			if (isset($_POST["username"])) {
-				$UserName = $_POST["username"];
-			} else {
-				require ("error.php"); 
-			}
-			if (isset($_POST["name"])) {
-				$Name = $_POST["name"];
-			} else {
-				require ("error.php"); 
-			}
-			if (isset($_POST["email"])) {
-				$Email = $_POST["email"];
-			} else {
-				require ("error.php"); 
-			}
-			if (isset($_POST["psw"])) {
-				$Password = $_POST["psw"];
-			} else {
-				require ("error.php"); 
-			}
+			if (isset($_POST["username"])) { $UserName = $_POST["username"]; } else { require ("error.php"); }
+			if (isset($_POST["name"])) { $Name = $_POST["name"]; } else { require ("error.php"); }
+			if (isset($_POST["email"])) { $Email = $_POST["email"]; } else { require ("error.php"); }
+			if (isset($_POST["psw"])) { $Password = $_POST["psw"]; } else { require ("error.php"); }
 
             $servername = "localhost";
             $username = "root";
@@ -49,17 +31,13 @@
             if (!$conn) { die("Connection failed: " . mysqli_connect_error() . "\n"); }
             $UserName = $_POST["username"];
             $Name = $_POST["name"];
-            
             $Email = $_POST["email"];
             $Password = $_POST["psw"];
 
             $sql = "REPLACE INTO UserList (UserName, Name, Email, Password)
             VALUES ('$UserName', '$Name', '$Email', '$Password')";
             
-            if (!mysqli_query($conn, $sql))
-            {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
+            if (!mysqli_query($conn, $sql)) { echo "Error: " . $sql . "<br>" . mysqli_error($conn); }
             
             mysqli_close($conn);
 

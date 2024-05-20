@@ -18,32 +18,12 @@
 
             //checks if process was triggered by a form,
             //if not display an error message on another file
-
-            if (isset($_POST["name"])) {
-                $Name = $_POST["name"];
-            } else {
-                //using require make link to error.php
-                require ("error.php"); 
-            }
+            if (isset($_POST["name"])) { $Name = $_POST["name"]; } else { /*using require make link to error.php*/ require ("error.php"); }
 
             //assign the rest of the form validation to PHP variables here
-            if (isset($_POST["username"])) {
-                $UserName = $_POST["username"];
-            } else {
-                require ("error.php"); 
-            }
-
-            if (isset($_POST["email"])) {
-                $Email = $_POST["email"];
-            } else {
-                require ("error.php"); 
-            }
-
-            if (isset($_POST["psw"])) {
-                $Password = $_POST["psw"];
-            } else {
-                require ("error.php"); 
-            }
+            if (isset($_POST["username"])) { $UserName = $_POST["username"]; } else { require ("error.php"); }
+            if (isset($_POST["email"])) { $Email = $_POST["email"]; } else { require ("error.php"); }
+            if (isset($_POST["psw"])) { $Password = $_POST["psw"]; } else { require ("error.php"); }
         ?>
 
         <form id="AccountConfirmform">
@@ -76,10 +56,7 @@
             $sql = "REPLACE INTO UserList (UserName, Name, Email, Password)
             VALUES ('$UserName', '$Name', '$Email', '$Password')";
             
-            if (!mysqli_query($conn, $sql))
-            {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-            }
+            if (!mysqli_query($conn, $sql)) { echo "Error: " . $sql . "<br>" . mysqli_error($conn); }
             
             mysqli_close($conn);
         ?>

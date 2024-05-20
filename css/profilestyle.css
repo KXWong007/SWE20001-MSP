@@ -92,7 +92,7 @@
 }
 
 /* Button styles */
-.btn-cancel, .btn-save, .btn-membership, .btn-logout {
+.btn-cancel, .btn-save, .btn-membership, .btn-logout, .btn-submit{
   width: 4cm;
   height: 1cm;
   cursor: pointer;
@@ -135,6 +135,14 @@
 }
 
 .btn-membership:hover{ background-color: #7CFC00; }
+
+.btn-submit {
+    color: #fff;
+    border: 1px solid #15ff00;
+    background-color: #15ff00;
+}
+
+.btn-submit:hover { background-color: #50ff40; }
 
 /*For check box*/
 .checkbox-container {

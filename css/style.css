@@ -46,9 +46,7 @@ body {
   text-decoration: none;
 }
 
-.header li a:hover, .header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
+.header li a:hover, .header .menu-btn:hover { background-color: #f4f4f4; }
 
 .header .logo {
   display: block;
@@ -125,25 +123,11 @@ body {
 .dropdown:hover .dropdown-content { display: block; }
 
 @media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
-  }
-  .header .left-menu {
-    clear: none;
-    float: left;
-    max-height: none;
-  }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
+  .header li { float: left; }
+  .header li a { padding: 20px 30px; }
+  .header .left-menu { clear: none; float: left; max-height: none; }
+  .header .menu { clear: none; float: right; max-height: none; }
+  .header .menu-icon { display: none; }
 }
 
 /*index.html*/
